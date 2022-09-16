@@ -21,6 +21,4 @@ app.use('/files',require('./Route/show'));
 app.use('/files/download',require('./Route/download'))
 
 
-app.listen(PORT,()=>{
-    console.log(`listening on port ${PORT}`);
-})
+app.listen(PORT, console.log(`Listening on port ${PORT}.`));
