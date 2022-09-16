@@ -3,7 +3,6 @@ const express=require("express");
 const mongoose = require("./Config/db");
 const path=require('path');
 const app=express();
-const PORT = process.env.PORT || 3000;
 const cors=require('cors')
 //Cors
 const corsOptions = {
@@ -21,4 +20,10 @@ app.use('/files',require('./Route/show'));
 app.use('/files/download',require('./Route/download'))
 
 
-app.listen(PORT, console.log(`Listening on port ${PORT}.`));
+app.listen(process.env.PORT || 3000, function () {
+  console.log(
+    "Express server listening on port %d in %s mode",
+    this.address().port,
+    app.settings.env
+  );
+});
