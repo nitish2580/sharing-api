@@ -1,0 +1,5 @@
+.env
+Uploads/*
+!Uploads/.gitkeep
+node_modules/*
+.Ds_store
